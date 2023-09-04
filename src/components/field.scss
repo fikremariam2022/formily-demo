@@ -1,0 +1,138 @@
+.field {
+  display: block;
+  padding: 10px 2px;
+}
+label {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.55;
+}
+input,
+select,
+textarea {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  -webkit-tap-highlight-color: transparent;
+  line-height: calc(2.125rem);
+  appearance: none;
+  resize: none;
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  display: block;
+  text-align: left;
+  border: 0.0625rem solid rgb(206, 212, 218);
+  background-color: rgb(255, 255, 255);
+  transition: border-color 100ms ease 0s;
+  padding-left: calc(0.75rem);
+  padding-right: calc(0.75rem);
+  border-radius: 0.25rem;
+  &:focus-within {
+    outline: none;
+    border-color: rgb(34, 139, 230);
+    box-shadow: 0 0 2px rgb(34, 139, 230);
+  }
+}
+input,
+select {
+  height: 2.25rem;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-tap-highlight-color: transparent;
+  appearance: none;
+  background-color: rgb(255, 255, 255);
+  border: 0.0625rem solid rgb(206, 212, 218);
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0px;
+  display: block;
+  margin: 2px;
+  transition: border-color 100ms ease 0s, background-color 100ms ease 0s;
+  cursor: pointer;
+  &:checked {
+    background-color: rgb(34, 139, 230);
+    border-color: rgb(34, 139, 230);
+    // &::after {
+    //   content: '';
+    //   width: 14px;
+    //   height: 9px;
+    //   border-bottom: solid 3px white;
+    //   border-left: solid 3px white;
+    //   display: inline-block;
+    //   top: 2px;
+    //   left: 0;
+    //   position: absolute;
+    //   transform: translateX(1px) rotate(-45deg);
+    // }
+  }
+  ~ .error {
+    display: block;
+  }
+}
+input[type="checkbox"] {
+  border-radius: 0.25rem;
+}
+input[type="radio"] {
+  border-radius: 50%;
+}
+input[type="checkbox"] {
+  position: relative;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"] {
+  text-align: "center";
+  max-width: 180px;
+}
+input:invalid[focused="true"] {
+  border: 1px solid rgb(237, 30, 30);
+}
+.invalid > .error {
+  display: block;
+}
+.required {
+  color: red;
+}
+.error {
+  color: red;
+  text-align: left;
+  display: block;
+}
+.help-text {
+  font-size: smaller;
+  color: #7e8891;
+  line-height: 0.25rem;
+}
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.icon {
+  color: rgb(134, 142, 150);
+  &-right {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+  }
+}
+input[type="range"] {
+  background-color: #fff;
+  border: 0.25rem solid #228be6;
+  color: #228be6;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 1000px;
+  background-color: #228be6;
+  height: 0.6rem;
+  border: none;
+  accent-color: black;
+}
+option + label:hover {
+  background-color: red;
+}
